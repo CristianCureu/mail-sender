@@ -17,7 +17,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/feedback" element={<Feedback />} />
         <Route path="/subscribe" element={<Subscribe />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/admin-login" element={<Login />} />
         <Route element={<PrivateRoute />}>
           <Route path="/admin" element={<Admin />} />
         </Route>
