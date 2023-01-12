@@ -1,0 +1,56 @@
+.query {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.query-form {
+  width: 40%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  box-shadow: rgba(109, 109, 109, 0.1) 0 4px 20px 4px;
+}
+.query-form input {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  border: none;
+  background-color: rgb(208, 237, 239);
+  color: rgb(45, 45, 45);
+  margin-top: 0.2rem;
+}
+.query-form input:focus {
+  outline-color: rgb(90, 90, 90);
+}
+.inputs {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  color: rgb(59, 59, 59);
+  font-size: 0.9rem;
+}
+.input-query {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.query-data {
+  display: flex;
+  width: 100%;
+  height: 70%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.chart {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
