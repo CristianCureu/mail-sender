@@ -7,6 +7,7 @@ import Subscribe from "./pages/Subscribe";
 import Admin from "./pages/admin/Admin";
 import Login from "./pages/admin/Login";
 import PrivateRoute from "./utils/privateRoutes";
+import "./app.css";
 
 function App() {
   return (

@@ -1,15 +1,16 @@
 import "./navbar.css";
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { motion as m } from "framer-motion";
 
 function Navbar() {
   const [navActive, setNavActive] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   return (
     <m.nav>
-      <div className="logo">
+      <div className="logo" onClick={() => navigate("/")}>
         <img src="images/logo.png" />
       </div>
       <ul className={navActive ? "nav-active" : ""}>
