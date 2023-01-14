@@ -3,47 +3,52 @@ import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 import InfoIcon from "@mui/icons-material/Info";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import { Link } from "react-router-dom";
-import "./background.css";
 
 const buttonStyle = {
-  border: "2px solid white",
-  borderTopLeftRadius: "0",
-  borderTopRightRadius: "1.5rem",
-  borderBottomLeftRadius: "1.5rem",
-  borderBottomRightRadius: "1.5rem",
+  padding: "0.5rem 1rem",
   color: "white",
-  padding: "1rem 2rem",
-  fontSize: "1rem",
-  letterSpacing: "1px",
+  letterSpacing: "0.5px",
+  border: "2px solid white",
 };
 
 function MainTitle() {
   return (
-    <div className="title">
-      <h1>OptiDora</h1>
-      <h3>ARE GRIJĂ DE OCHII TĂI</h3>
-      <div className="buttons">
-        <Button sx={buttonStyle} startIcon={<InfoIcon />}>
-          Detalii
-        </Button>
+    <div
+      className="h-full absolute text-white 
+      flex flex-col items-center justify-around
+      lg:w-3/4
+      "
+    >
+      <h1 className="font-bold text-5xl lg:text-7xl">OptiDora</h1>
+      <h3 className="font-bold text-xl lg:text-2xl">ARE GRIJĂ DE OCHII TĂI</h3>
+      <div className="flex flex-col items-center justify-between h-2/6 lg:scale-110">
+        <Link to="#detalii">
+          <Button sx={buttonStyle} startIcon={<InfoIcon />}>
+            Detalii
+          </Button>
+        </Link>
         <Link to="/contact">
           <Button sx={buttonStyle} startIcon={<ContactMailIcon />}>
             Contactează-ne
           </Button>
         </Link>
+        <Link to="/subscribe">
+          <Button
+            variant="contained"
+            color="success"
+            endIcon={<NotificationsActiveIcon />}
+            sx={buttonStyle}
+            className="btn-main"
+          >
+            Abonează-te
+          </Button>
+        </Link>
       </div>
-      <Link to="/subscribe">
-        <Button
-          variant="contained"
-          color="success"
-          endIcon={<NotificationsActiveIcon />}
-          sx={buttonStyle}
-          className="btn-main"
-        >
-          Abonează-te
-        </Button>
-      </Link>
-      <div className="title-feedback">
+      <div
+        className="flex flex-col items-center text-center justify-around h-1/5
+      lg:text-xl
+      "
+      >
         <p>Ai experimentat OptiDora?</p>
         <div>
           Lasă-ne un
