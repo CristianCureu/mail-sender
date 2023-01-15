@@ -1,6 +1,6 @@
 import "./pages.css";
 import Background from "../components/Background/Background";
-import MainTitle from "../components/Background/MainTitle";
+import MainTitle from "../components/MainTitle";
 
 function Main() {
   return (

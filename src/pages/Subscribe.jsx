@@ -1,4 +1,4 @@
-import SubscribeForm from "../components/SubscribeForm/SubscribeForm";
+import SubscribeForm from "../components/SubscribeForm";
 import "./pages.css";
 
 function Subscribe() {

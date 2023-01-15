@@ -1,4 +1,3 @@
-import "./subscribeform.css";
 import { useRef, useState } from "react";
 import { useEffect } from "react";
 import TextField from "@mui/material/TextField";
@@ -6,7 +5,7 @@ import Button from "@mui/material/Button";
 import InfoIcon from "@mui/icons-material/Info";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
-import toastOptions from "../../utils/toastOptions";
+import toastOptions from "../utils/toastOptions";
 
 function SubscribeForm() {
   const [user, setUser] = useState({});
@@ -62,8 +61,15 @@ function SubscribeForm() {
   }, [user]);
 
   return (
-    <form className="subscribe-form" onSubmit={submitHandler}>
-      <div className="subscribe-info">
+    <form
+      className="w-10/12 h-5/6 flex flex-col justify-around items-center"
+      autoComplete="off"
+      onSubmit={submitHandler}
+    >
+      <div
+        className="flex flex-col text-sm
+       justify-center items-center text-center p-2"
+      >
         <InfoIcon color="info" />
         <p>
           Te rog introdu numele si adresa de email pentru a fi la curent cu
@@ -78,6 +84,14 @@ function SubscribeForm() {
         onChange={(e) => onChangeHandler(e.target.name, e.target.value)}
       />
       <TextField
+        name="prenume"
+        label="Prenume"
+        variant="outlined"
+        value={user.prenume || ""}
+        onChange={(e) => onChangeHandler(e.target.name, e.target.value)}
+      />
+      <TextField
+        type="email"
         name="email"
         label="Email"
         variant="outlined"

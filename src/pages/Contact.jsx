@@ -1,5 +1,5 @@
 import Background from "../components/Background/Background";
-import ContactInfo from "../components/Contact/ContactInfo";
+import ContactInfo from "../components/ContactInfo";
 import "./pages.css";
 
 function Contact() {

@@ -1,4 +1,4 @@
-import FeedbackForm from "../components/FeedbackForm/FeedbackForm";
+import FeedbackForm from "../components/FeedbackForm";
 
 function Feedback() {
   return (

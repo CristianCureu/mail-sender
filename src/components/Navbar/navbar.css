@@ -50,7 +50,7 @@ nav .logo img {
   border-radius: 4px;
   width: 2rem;
   height: 3px;
-  background-color: black;
+  background-color: rgb(36, 36, 36);
   transition: all 0.3s ease;
 }
 .link {
@@ -74,6 +74,10 @@ nav .logo img {
 @media screen and (max-width: 480px) {
   nav {
     padding: 0 5%;
+    height: 10vh;
+  }
+  nav .logo {
+    height: 9vh;
   }
   nav ul {
     display: flex;

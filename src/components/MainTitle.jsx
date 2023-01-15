@@ -8,19 +8,23 @@ const buttonStyle = {
   padding: "0.5rem 1rem",
   color: "white",
   letterSpacing: "0.5px",
-  border: "2px solid white",
+  border: "1px solid white",
 };
 
 function MainTitle() {
   return (
     <div
-      className="h-full absolute text-white 
+      className="h-full p-2 absolute text-white 
       flex flex-col items-center justify-around
       lg:w-3/4
       "
     >
-      <h1 className="font-bold text-5xl lg:text-7xl">OptiDora</h1>
-      <h3 className="font-bold text-xl lg:text-2xl">ARE GRIJĂ DE OCHII TĂI</h3>
+      <div className="h-1/5 flex flex-col items-center justify-around">
+        <h1 className="font-bold text-5xl lg:text-7xl">OptiDora</h1>
+        <h3 className="font-bold text-xl lg:text-2xl">
+          ARE GRIJĂ DE OCHII TĂI
+        </h3>
+      </div>
       <div className="flex flex-col items-center justify-between h-2/6 lg:scale-110">
         <Link to="#detalii">
           <Button sx={buttonStyle} startIcon={<InfoIcon />}>
@@ -46,8 +50,7 @@ function MainTitle() {
       </div>
       <div
         className="flex flex-col items-center text-center justify-around h-1/5
-      lg:text-xl
-      "
+      lg:text-xl"
       >
         <p>Ai experimentat OptiDora?</p>
         <div>

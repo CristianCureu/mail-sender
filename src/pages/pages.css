@@ -13,6 +13,13 @@
 }
 
 @media screen and (max-width: 480px) {
+  .main,
+  .feedback,
+  .subscribe,
+  .contact {
+    height: 90vh;
+    margin-top: 10vh;
+  }
   .feedback,
   .subscribe {
     align-items: flex-start;
