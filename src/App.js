@@ -7,6 +7,7 @@ import Subscribe from "./pages/Subscribe";
 import Admin from "./pages/admin/Admin";
 import Login from "./pages/admin/Login";
 import PrivateRoute from "./utils/privateRoutes";
+import Detalii from "./pages/Detalii";
 import "./App.css";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Main />} />
+        <Route path="/detalii" element={<Detalii />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/feedback" element={<Feedback />} />
         <Route path="/subscribe" element={<Subscribe />} />

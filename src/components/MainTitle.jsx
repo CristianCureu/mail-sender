@@ -16,8 +16,7 @@ function MainTitle() {
     <div
       className="h-full p-2 absolute text-white 
       flex flex-col items-center justify-around
-      lg:w-3/4
-      "
+      lg:w-3/4"
     >
       <div className="h-1/5 flex flex-col items-center justify-around">
         <h1 className="font-bold text-5xl lg:text-7xl">OptiDora</h1>
@@ -26,7 +25,7 @@ function MainTitle() {
         </h3>
       </div>
       <div className="flex flex-col items-center justify-between h-2/6 lg:scale-110">
-        <Link to="#detalii">
+        <Link to="/detalii">
           <Button sx={buttonStyle} startIcon={<InfoIcon />}>
             Detalii
           </Button>
