@@ -20,10 +20,10 @@ Indiferent de tipul de serviciu furnizat – consult oftalmologic, investigații
 
 function Servicii() {
   return (
-    <div className="lg:w-3/4">
-      <div className="mt-8 mb-4 text-center">
+    <div className="lg:w-3/4 mb-4 mt-16">
+      <div className="text-center">
         <h4 className="text-xl text-lime-600">OPTIDORA</h4>
-        <h2 className="text-4xl text-green-700 font-bold lg:text-5xl">
+        <h2 className="text-5xl text-green-700 font-bold lg:text-5xl">
           Servicii
         </h2>
       </div>

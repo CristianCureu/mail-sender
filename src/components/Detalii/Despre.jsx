@@ -5,8 +5,8 @@ function Despre() {
     <div className="w-full mb-4 mt-4 lg:w-3/4 lg:mb-10 lg:mt-10 overflow-hidden">
       <m.div
         initial={{ x: "-100%" }}
-        whileInView={{ x: "0%" }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
+        animate={{ x: "0%" }}
+        transition={{ duration: 1, ease: "easeOut" }}
         className="mb-8"
       >
         <h2
@@ -18,8 +18,8 @@ function Despre() {
         </h2>
         <m.div
           initial={{ x: "-100%" }}
-          whileInView={{ x: "0%" }}
-          transition={{ duration: 0.75, ease: "easeOut" }}
+          animate={{ x: "0%" }}
+          transition={{ duration: 1, delay:0.25, ease: "easeOut" }}
           className="border-2 border-l-lime-600 border-r-0 border-t-0 border-b-0 pl-2
         lg:text-lg"
         >

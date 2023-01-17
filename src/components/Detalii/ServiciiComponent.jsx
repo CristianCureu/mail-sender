@@ -5,8 +5,8 @@ function ServiciiComponent({ image, title, text, imgPosition }) {
     <div
       className={
         imgPosition === "right"
-          ? "lg:flex lg:justify-around overflow-hidden flex-row-reverse"
-          : "lg:flex lg:justify-around overflow-hidden"
+          ? "lg:flex lg:justify-evenly overflow-hidden flex-row-reverse"
+          : "lg:flex lg:justify-evenly overflow-hidden"
       }
     >
       <m.div

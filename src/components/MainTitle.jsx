@@ -14,7 +14,7 @@ const buttonStyle = {
 function MainTitle() {
   return (
     <div
-      className="h-full p-2 absolute text-white 
+      className="h-full pb-8 p-2 absolute text-white 
       flex flex-col items-center justify-around
       lg:w-3/4"
     >
