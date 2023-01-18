@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { useEffect } from "react";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import SendIcon from "@mui/icons-material/Send";
 import InfoIcon from "@mui/icons-material/Info";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
@@ -62,13 +63,13 @@ function SubscribeForm() {
 
   return (
     <form
-      className="w-10/12 h-5/6 flex flex-col justify-around items-center"
+      className="w-10/12 h-5/6 flex flex-col justify-around items-center lg:w-3/5"
       autoComplete="off"
       onSubmit={submitHandler}
     >
       <div
         className="flex flex-col text-sm
-       justify-center items-center text-center p-2"
+       justify-center items-center text-center p-2 lg:w-3/5"
       >
         <InfoIcon color="info" />
         <p>
@@ -98,7 +99,7 @@ function SubscribeForm() {
         value={user.email || ""}
         onChange={(e) => onChangeHandler(e.target.name, e.target.value)}
       />
-      <Button variant="contained" type="submit">
+      <Button variant="contained" endIcon={<SendIcon />} type="submit">
         Abonează-te
       </Button>
       <ToastContainer limit={1} />

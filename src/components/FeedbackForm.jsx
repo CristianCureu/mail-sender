@@ -5,6 +5,8 @@ import FormLabel from "@mui/material/FormLabel";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Radio from "@mui/material/Radio";
 import Button from "@mui/material/Button";
+import SendIcon from "@mui/icons-material/Send";
+import InfoIcon from "@mui/icons-material/Info";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import toastOptions from "../utils/toastOptions";
@@ -55,12 +57,21 @@ function FeedbackForm() {
 
   return (
     <form
-      className="feedback-form flex flex-col items-center justify-between
-      h-full w-full"
+      className="flex flex-col items-center w-full mt-4 mb-8 p-2 lg:w-3/5"
       autoComplete="off"
       onSubmit={submitHandler}
     >
-      <div className="h-2/6 flex flex-col justify-between scale-75">
+      <div
+        className="flex flex-col text-sm
+        justify-center items-center text-center mb-6 pl-4 pr-4 lg:w-3/5"
+      >
+        <InfoIcon color="info" />
+        <p>
+          Te rog introdu numele, prenumele si adresa de email, iar apoi răspunde
+          la cele 3 întrebari și apasă butonul "Trimite Feedback"
+        </p>
+      </div>
+      <div className="h-56 flex flex-col justify-between scale-95">
         <TextField
           name="nume"
           label="Nume"
@@ -84,10 +95,7 @@ function FeedbackForm() {
           onChange={(e) => onChangeHandler(e.target.name, e.target.value)}
         />
       </div>
-      <div
-        className="flex flex-col items-center text-center justify-between 
-      h-3/6 border"
-      >
+      <div className="flex flex-col items-center text-center justify-between w-full h-72 mb-8 mt-8">
         <div className="flex flex-col justify-center items-center">
           <FormLabel id="first">Ofera o nota consultului Optidora</FormLabel>
           <RadioGroup
@@ -138,8 +146,8 @@ function FeedbackForm() {
           </RadioGroup>
         </div>
       </div>
-      <Button variant="contained" type="submit">
-        Trimite
+      <Button variant="contained" endIcon={<SendIcon />} type="submit">
+        Trimite Feedback
       </Button>
       <ToastContainer limit={1} />
     </form>

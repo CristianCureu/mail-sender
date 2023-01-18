@@ -1,5 +1,4 @@
 .main,
-.feedback,
 .subscribe,
 .contact {
   margin-top: 12vh;
@@ -11,7 +10,7 @@
   justify-content: center;
   overflow-x: hidden;
 }
-.detalii {
+.detalii, .feedback {
   margin-top: 12vh;
   width: 100%;
   display: flex;
@@ -22,11 +21,13 @@
 
 @media screen and (max-width: 480px) {
   .main,
-  .feedback,
   .subscribe,
   .contact {
     margin-top: 10vh;
     height: 90vh;
+  }
+  .feedback{
+    margin-top: 10vh;
   }
   .detalii {
     margin-top: 10vh;
