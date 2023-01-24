@@ -1,4 +1,3 @@
-import "./loginForm.css";
 import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import TextField from "@mui/material/TextField";
@@ -19,13 +18,16 @@ function LoginForm() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`${process.env.REACT_APP_SERVER_URL}/admin/login`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(user),
-      });
+      const res = await fetch(
+        `${process.env.REACT_APP_SERVER_URL}/admin/login`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(user),
+        }
+      );
       const response = await res.json();
       if (response.success === false) {
         if (!toast.isActive(toastId.current)) {
@@ -42,15 +44,20 @@ function LoginForm() {
   };
 
   return (
-    <form className="login-form" onSubmit={handleLogin}>
+    <form
+      className="flex flex-col h-2/3 items-center justify-between"
+      onSubmit={handleLogin}
+    >
       <TextField
         name="username"
+        autoComplete="off"
         label="Username"
         variant="outlined"
         onChange={(e) => onChangeHandler(e.target.name, e.target.value)}
       />
       <TextField
         name="password"
+        autoComplete="off"
         label="Password"
         type="password"
         variant="outlined"

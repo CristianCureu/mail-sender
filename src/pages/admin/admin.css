@@ -1,12 +1,16 @@
-.login, .admin {
-    margin-top: 12vh;
-    height: 88vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.login,
+.admin {
+  margin-top: 12vh;
+  height: 88vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.admin {
-    flex-direction: column;
-    padding: 1.5rem;
+@media screen and (max-width: 480px) {
+  .admin,
+  .login {
+    min-height: 90vh;
+    margin-top: 10vh;
+  }
 }
