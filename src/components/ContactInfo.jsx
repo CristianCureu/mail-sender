@@ -7,8 +7,8 @@ function ContactInfo() {
     w-5/6 text-white lg:w-2/5"
     >
       <div
-        className="h-14 w-full text-2xl flex flex-col items-center justify-center 
-        rounded-sm bg-[#0000004a] lg:p-10 lg:text-4xl lg:w-3/5"
+        className="p-4 w-full text-2xl flex flex-col items-center justify-center 
+        rounded-sm bg-[#0000004a] lg:text-4xl lg:w-3/5"
       >
         <div className="overflow-hidden">
           <m.h2
@@ -21,7 +21,7 @@ function ContactInfo() {
         </div>
       </div>
       <div
-        className="h-1/4 w-full flex flex-col justify-evenly
+        className="h-1/3 w-full flex flex-col justify-evenly
         rounded-sm bg-[#0000004a] p-6 lg:text-2xl"
       >
         <div className="overflow-hidden">
@@ -46,7 +46,7 @@ function ContactInfo() {
         </div>
       </div>
       <div
-        className="h-1/4 w-full flex flex-col justify-evenly 
+        className="h-1/3 w-full flex flex-col justify-evenly 
         rounded-sm bg-[#0000004a] p-6 lg:text-2xl"
       >
         <div className="overflow-hidden">
