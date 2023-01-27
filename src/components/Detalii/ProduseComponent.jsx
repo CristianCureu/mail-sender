@@ -9,7 +9,7 @@ function ProduseComponent({ title, image, text }) {
       <m.div
         initial={{ x: "-100%" }}
         whileInView={{ x: "0%" }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        transition={{ duration: 0.75, ease: "easeOut" }}
         className=" lg:p-0 mb-2"
       >
         <img
@@ -21,7 +21,7 @@ function ProduseComponent({ title, image, text }) {
       <m.div
         initial={{ x: "100%" }}
         whileInView={{ x: "0%" }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        transition={{ duration: 0.75, ease: "easeOut" }}
         className="border-2 border-l-lime-600 border-r-0 border-t-0 border-b-0 pl-2 mt-1"
       >
         {text}

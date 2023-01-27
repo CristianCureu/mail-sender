@@ -6,7 +6,7 @@ function Despre() {
       <m.div
         initial={{ x: "-100%" }}
         animate={{ x: "0%" }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
         className="mb-8"
       >
         <h2
@@ -19,7 +19,7 @@ function Despre() {
         <m.div
           initial={{ x: "-100%" }}
           animate={{ x: "0%" }}
-          transition={{ duration: 1, delay:0.25, ease: "easeOut" }}
+          transition={{ duration: 0.7, delay:0.25, ease: "easeOut" }}
           className="border-2 border-l-lime-600 border-r-0 border-t-0 border-b-0 pl-2
         lg:text-lg"
         >
@@ -53,7 +53,7 @@ function Despre() {
         <m.div
           initial={{ x: "-100%" }}
           whileInView={{ x: "0%" }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="lg:w-2/4 mb-6 p-2"
         >
           <img src="images/despre-img.jpeg" className="w-full h-full" />
@@ -61,7 +61,7 @@ function Despre() {
         <m.div
           initial={{ x: "100%" }}
           whileInView={{ x: "0%" }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
           className="lg:w-2/5 lg:flex lg:flex-col lg:justify-center"
         >
           <h2

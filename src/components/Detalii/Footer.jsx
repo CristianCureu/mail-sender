@@ -5,7 +5,7 @@ function Footer() {
     <footer className="p-8 pt-0 w-screen h-72 bg-neutral-800">
       <div className="overflow-hidden">
         <m.h2
-          initial={{ y: "-100%" }}
+          initial={{ y: "100%" }}
           whileInView={{ y: "0%" }}
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="text-sky-400 text-3xl"

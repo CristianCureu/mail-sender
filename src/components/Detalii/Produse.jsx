@@ -69,7 +69,7 @@ const text3 = (
 
 function Produse() {
   return (
-    <div className="lg:w-3/4 mt-16">
+    <div className="lg:w-4/5 mt-16">
       <div className="text-center lg:p-4">
         <h4 className="text-xl text-lime-600">PRODUSE</h4>
         <h2 className="text-4xl text-green-700 font-bold lg:text-5xl mb-4">

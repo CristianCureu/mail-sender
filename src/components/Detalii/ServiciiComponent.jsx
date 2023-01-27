@@ -5,23 +5,23 @@ function ServiciiComponent({ image, title, text, imgPosition }) {
     <div
       className={
         imgPosition === "right"
-          ? "lg:flex lg:justify-evenly overflow-hidden flex-row-reverse"
-          : "lg:flex lg:justify-evenly overflow-hidden"
+          ? "lg:flex lg:justify-evenly lg:mt-8 overflow-hidden flex-row-reverse"
+          : "lg:flex lg:justify-evenly lg:mt-8 overflow-hidden"
       }
     >
       <m.div
         initial={imgPosition === "right" ? { x: "100%" } : { x: "-100%" }}
         whileInView={{ x: "0%" }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        className="lg:w-2/4 mt-10 p-2"
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="lg:w-2/4 mt-10 lg:mt-0 p-2 flex justify-center"
       >
         <img src={image} className="w-full h-full rounded-md lg:w-11/12" />
       </m.div>
       <m.div
         initial={imgPosition === "right" ? { x: "-100%" } : { x: "100%" }}
         whileInView={{ x: "0%" }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        className="lg:w-2/5 lg:flex lg:flex-col lg:justify-center"
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="lg:w-2/4 lg:flex lg:flex-col lg:justify-center"
       >
         <h2 className="lg:text-4xl text-green-800 font-bold text-3xl pb-2 pt-1 lg:mb-4 lg:mt-4">
           {title}
