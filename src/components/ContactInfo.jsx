@@ -3,7 +3,7 @@ import { motion as m } from "framer-motion";
 function ContactInfo() {
   return (
     <div
-      className="absolute h-full flex flex-col items-center justify-evenly
+      className="absolute h-full pb-10 flex flex-col items-center justify-evenly
     w-5/6 text-white lg:w-2/5"
     >
       <div

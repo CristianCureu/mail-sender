@@ -1,7 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Button from "@mui/material/Button";
 import SendIcon from "@mui/icons-material/Send";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import toastOptions from "../utils/toastOptions";
 
 const validEmail = new RegExp("^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$");
 const a = Math.floor(Math.random() * 5 + 1);
@@ -12,39 +16,48 @@ function ContactForm() {
   const [info, setInfo] = useState({});
   const [sent, setSent] = useState(false);
   const form = useRef();
+  const toastId = useRef(null);
 
   const onChangeHandler = (fieldName, value) => {
     setInfo({ ...info, [fieldName]: value });
   };
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
-
-    emailjs
-      .sendForm(
+    try {
+      const result = await emailjs.sendForm(
         process.env.REACT_APP_EMAILJS_SERVICE,
         process.env.REACT_APP_EMAILJS_TEMPLATE,
         form.current,
         process.env.REACT_APP_EMAILJS_KEY
-      )
-      .then(
-        (result) => {
-          if (result.text === "OK") {
-            setSent(true);
-          }
-        },
-        (error) => {
-          console.log(error.text);
-        }
       );
-    e.target.reset();
+      if (result.status === 200 && result.text === "OK") {
+        e.target.reset();
+        setSent(true);
+      } else {
+        if (!toast.isActive(toastId.current)) {
+          toastId.current = toast.error(
+            "Ne pare rău, încearcă din nou mai târziu!",
+            toastOptions
+          );
+        }
+      }
+    } catch (err) {
+      if (!toast.isActive(toastId.current)) {
+        toastId.current = toast.error(
+          "Ne pare rău, încearcă din nou mai târziu sau contactează-ne prin telefon!",
+          toastOptions
+        );
+      }
+    }
   };
 
   return (
     <div className="h-screen w-full lg:w-1/3 flex flex-col items-center justify-evenly px-4 pb-6">
       {sent ? (
-        <div className="h-screen w-full flex flex-col items-center justify-center text-center px-6">
-          <h2 className="text-2xl pb-2 lg:text-3xl">Mulțumim!</h2>
+        <div className="h-screen w-full flex flex-col items-center justify-center text-center px-8">
+          <CheckCircleIcon color="success" sx={{ scale: "1.2" }} />
+          <h2 className="text-2xl pb-2 pt-4 lg:text-3xl">Mulțumim!</h2>
           <p className="text-lg p-4">Mesajul tău a fost trimis cu succes,</p>
           <p className="text-lg">Vei primi un răspuns în cel mai scurt timp!</p>
         </div>
@@ -143,6 +156,9 @@ function ContactForm() {
           >
             Trimite mesaj
           </Button>
+          <div className="absolute">
+            <ToastContainer />
+          </div>
         </form>
       )}
     </div>
