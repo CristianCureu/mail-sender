@@ -68,11 +68,11 @@ function ContactForm() {
           className="h-screen w-full flex flex-col items-center justify-around px-4 pb-6 text-lg"
           autoComplete="nope"
         >
-          <div>
-            <p className="text-center mb-2">
+          <div className="text-gray-800">
+            <p className="text-center mb-2 font-bold">
               Dorești să ne contactezi prin email?
             </p>
-            <p className="text-center">
+            <p className="text-center text-md">
               Completează formularul si trimite-ne un mesaj!
             </p>
           </div>

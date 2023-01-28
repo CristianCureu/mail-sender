@@ -29,7 +29,7 @@ function OchelariPersonalizati() {
           perfectă.
         </p>
       </div>
-      <h3 className="mt-8 px-6 mb-4 text-2xl text-gray-800">
+      <h3 className="mt-6 px-6 text-2xl text-gray-800">
         Lentilele optimizate cu DNEye® îți oferă următoarele avantaje
       </h3>
       <div className="lg:flex w-4/5 lg:justify-between">

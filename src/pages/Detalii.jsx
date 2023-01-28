@@ -8,6 +8,7 @@ import Produse from "../components/Detalii/Produse";
 import Servicii from "../components/Detalii/Servicii";
 import "./pages.css";
 import { motion as m } from "framer-motion";
+import ContactForm from "../components/ContactForm";
 
 function Detalii() {
   return (
@@ -18,6 +19,7 @@ function Detalii() {
       <Experienta />
       <OchelariPersonalizati />
       <CalitateaOpti />
+      <ContactForm />
       <Map />
       <Footer />
     </m.div>

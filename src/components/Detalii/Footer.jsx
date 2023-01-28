@@ -2,7 +2,7 @@ import { motion as m } from "framer-motion";
 
 function Footer() {
   return (
-    <footer className="p-8 pt-0 w-screen h-72 bg-neutral-800">
+    <footer className="p-6 lg:py-8 lg:text-center w-screen h-[40vh] bg-neutral-800">
       <div className="overflow-hidden">
         <m.h2
           initial={{ y: "100%" }}
