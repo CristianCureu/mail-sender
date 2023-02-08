@@ -51,7 +51,12 @@ function FeedbackForm() {
         setFeedback({});
       }
     } catch (err) {
-      console.log(err);
+      if (!toast.isActive(toastId.current)) {
+        toastId.current = toast.error(
+          "Te rog încearcă mai târziu",
+          toastOptions
+        );
+      }
     }
   };
 
