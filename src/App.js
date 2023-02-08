@@ -1,3 +1,4 @@
+import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Main from "./pages/Main";
 import Feedback from "./pages/Feedback";
@@ -8,7 +9,9 @@ import Admin from "./pages/admin/Admin";
 import Login from "./pages/admin/Login";
 import PrivateRoute from "./utils/privateRoutes";
 import Detalii from "./pages/Detalii";
-import "./App.css";
+import ChartPage from "./pages/admin/ChartPage";
+import EmailPage from "./pages/admin/EmailPage";
+import Template from "./pages/admin/Template";
 
 function App() {
   return (
@@ -23,6 +26,10 @@ function App() {
         <Route path="/admin-login" element={<Login />} />
         <Route element={<PrivateRoute />}>
           <Route path="/admin" element={<Admin />} />
+          <Route path="/admin-chart" element={<ChartPage />} />
+          <Route path="/admin-email" element={<EmailPage />} />
+          <Route path="/admin-template-1" element={<Template />} />
+          <Route path="/admin-template-2" element={<Template />} />
         </Route>
       </Routes>
     </div>

@@ -2,6 +2,11 @@ import "./navbar.css";
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { motion as m } from "framer-motion";
+import HomeIcon from '@mui/icons-material/Home';
+import ContactPageIcon from '@mui/icons-material/ContactPage';
+import InfoIcon from '@mui/icons-material/Info';
+import FeedbackIcon from '@mui/icons-material/Feedback';
+import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 
 function Navbar() {
   const [navActive, setNavActive] = useState(false);

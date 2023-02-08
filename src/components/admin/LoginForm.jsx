@@ -4,7 +4,7 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import toastOptions from "../../../utils/toastOptions";
+import toastOptions from "../../utils/toastOptions";
 
 function LoginForm() {
   const [user, setUser] = useState({});
