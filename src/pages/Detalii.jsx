@@ -12,7 +12,7 @@ import ContactForm from "../components/ContactForm";
 
 function Detalii() {
   return (
-    <m.div className="detalii">
+    <m.div className="detalii" id="detalii">
       <Despre />
       <Servicii />
       <Produse />

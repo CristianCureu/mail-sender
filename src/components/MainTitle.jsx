@@ -4,6 +4,7 @@ import InfoIcon from "@mui/icons-material/Info";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import { Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
+import { HashLink } from 'react-router-hash-link';
 
 const buttonStyle = {
   padding: "0.5rem 1rem",
@@ -15,11 +16,11 @@ const buttonStyle = {
 function MainTitle() {
   return (
     <div
-      className="h-full pb-8 p-2 absolute text-white 
-      flex flex-col items-center justify-around
+      className="h-full pb-8 absolute text-white 
+      flex flex-col items-center justify-around z-10
       lg:w-3/4"
     >
-      <div className="h-1/5 flex flex-col items-center justify-around">
+      <div className="h-1/4 flex flex-col items-center justify-around">
         <div className="overflow-hidden">
           <m.h1
             initial={{ y: "100%" }}
@@ -45,7 +46,7 @@ function MainTitle() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
-        className="flex flex-col items-center justify-between h-2/6 lg:scale-110"
+        className="flex flex-col items-center justify-around h-2/4 lg:scale-110"
       >
         <Link to="/detalii">
           <Button sx={buttonStyle} startIcon={<InfoIcon />}>
@@ -57,20 +58,20 @@ function MainTitle() {
             Contactează-ne
           </Button>
         </Link>
-        <Link to="/subscribe">
-          <Button
-            variant="contained"
-            color="success"
-            startIcon={<NotificationsActiveIcon />}
-            sx={buttonStyle}
-            className="btn-main"
-          >
-            Abonează-te
-          </Button>
-        </Link>
+          <Link to="/subscribe" className="hidden md:flex">
+            <Button
+              variant="contained"
+              color="success"
+              startIcon={<NotificationsActiveIcon />}
+              sx={buttonStyle}
+              className="btn-main"
+            >
+              Abonează-te
+            </Button>
+          </Link>
       </m.div>
       <div
-        className="flex flex-col items-center text-center justify-around h-1/5
+        className="hidden md:flex flex-col items-center text-center justify-around h-1/5
         lg:text-xl"
       >
         <div className="overflow-hidden">

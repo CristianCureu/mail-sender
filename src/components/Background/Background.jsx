@@ -1,3 +1,4 @@
+import MainTitle from "../MainTitle";
 import "./background.css";
 
 function Background() {
